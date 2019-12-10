@@ -1,20 +1,19 @@
-# Task
+# OCPP Websocket App
 
 ## Requirements
 
 * Provide instuction how to compile and launch application
 * Implement using modern C++ features
 * Unit test is not required but is a plus
-* Usage of 3rd party libraries or linux pachages allowed
+* Usage of 3rd party libraries or linux packages allowed
 
 ## Application
 
-* Simple app menu (commant line app using `cin/cout` is enougth)
+* Simple app menu (commant line app using `cin/cout` is enough)
 * After app starts it shoud connect to server using websocket
 * If websocket connection was successfull aop should send `BootNotification`
 * App user should be able to start transaction (`StartTransaction`)
 * If charge tracsaction was successfull user should be able to stop transaction (`StopTransaction`)
-* App should display 
 
 ## Additional info
 
@@ -28,6 +27,14 @@
 
 * Use your own
 
-### BootNotification properties
+### StartTransaction properties
 
-* Use your own
+* `connectorId` - `1`
+* `idTag` - use random string, generated on app start
+* `meterStart` - use random number
+
+### StopTransaction properties
+
+* `idTag` - Same tag as in `StartTransaction`
+* `idTag` - Same tag as in `StartTransaction`
+* `meterStop` - `meterStart` from `StartTransaction` + some value
