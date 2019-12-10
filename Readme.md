@@ -17,6 +17,16 @@
 
 ## Additional info
 
+### Documentation
+
+* [OCPP 1.6 JSON](OCPP1.6Specification-JSON.pdf) - basic setup to connect to websecket messages format
+* [OCPP1.6 Edition](OCPP1.6Specification-Edition.pdf) - OCPP protocol specification
+
+### Websocket headers
+
+* WebSocket/JSON endpoint for OCPP:	ws://3.125.118.3:8080/steve/websocket/CentralSystemService/(chargeBoxId)
+* chargeBoxId - use one off `public_1`, `public_2`, `public_3`
+
 ### Websocket headers
 
 * `Sec-WebSocket-Key` - not required
