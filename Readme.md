@@ -1,33 +1,33 @@
-# OCPP Websocket App
+# OCPP WebSocket App
 
 ## Requirements
 
-* Provide instuction how to compile and launch application
+* Provide instruction how to compile and launch application
 * Implement using modern C++ features
 * Unit test is not required but is a plus
-* Usage of 3rd party libraries or linux packages allowed
+* Usage of 3rd party libraries or Linux packages allowed
 
 ## Application
 
-* Simple app menu (commant line app using `cin/cout` is enough)
-* After app starts it shoud connect to server using websocket
-* If websocket connection was successfull aop should send `BootNotification`
+* Simple app menu (command line app using `cin/cout` is enough)
+* After app starts it should connect to server using WebSocket
+* If WebSocket connection was successful app should send `BootNotification`
 * App user should be able to start transaction (`StartTransaction`)
-* If charge tracsaction was successfull user should be able to stop transaction (`StopTransaction`)
+* If charge transaction was successful user should be able to stop transaction (`StopTransaction`)
 
 ## Additional info
 
 ### Documentation
 
-* [OCPP 1.6 JSON](OCPP1.6Specification-JSON.pdf) - basic setup to connect to websecket messages format
-* [OCPP1.6 Edition](OCPP1.6Specification-Edition.pdf) - OCPP protocol specification
+* [OCPP 1.6 Specification - JSON](OCPP1.6Specification-JSON.pdf) - document gives the information required to create a correct interoperable OCPP JSON implementation
+* [OCPP 1.6 Specification - Edition](OCPP1.6Specification-Edition.pdf) - document defines the protocol used between a Charge Point and Central System
 
-### Websocket headers
+### Configuration
 
-* WebSocket/JSON endpoint for OCPP:	ws://3.125.118.3:8080/steve/websocket/CentralSystemService/(chargeBoxId)
-* chargeBoxId - use one off `public_1`, `public_2`, `public_3`
+* OCPP JSON WebSocket URL - `ws://3.125.118.3:8080/steve/websocket/CentralSystemService/(chargeBoxId)`
+* chargeBoxId - `[public_1, public_2, public_3]`
 
-### Websocket headers
+### WebSocket headers
 
 * `Sec-WebSocket-Key` - not required
 * `Sec-WebSocket-Protocol` - `"ocpp1.6"`
@@ -46,5 +46,4 @@
 ### StopTransaction properties
 
 * `idTag` - Same tag as in `StartTransaction`
-* `idTag` - Same tag as in `StartTransaction`
-* `meterStop` - `meterStart` from `StartTransaction` + some value
+* `meterStop` - `meterStart` + some value
