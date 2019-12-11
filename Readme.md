@@ -1,12 +1,5 @@
 # OCPP WebSocket App
 
-## Requirements
-
-* Provide instruction how to compile and launch application
-* Implement using modern C++ features
-* Unit test is not required but is a plus
-* Usage of 3rd party libraries or Linux packages allowed
-
 ## Application
 
 * Simple app menu (command line app using `cin/cout` is enough)
@@ -14,6 +7,13 @@
 * If WebSocket connection was successful app should send `BootNotification`
 * App user should be able to start transaction (`StartTransaction`)
 * If charge transaction was successful user should be able to stop transaction (`StopTransaction`)
+
+## Requirements
+
+* Implement using modern C++ features
+* Unit test is not required but is a plus
+* Usage of 3rd party libraries or Linux packages allowed
+* We expect to get a GitHub repository containing application's source code and short instruction in readme.md how to run that application
 
 ## Additional info
 
